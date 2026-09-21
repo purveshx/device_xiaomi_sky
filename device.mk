@@ -306,9 +306,10 @@ PRODUCT_COPY_FILES += \
 		$(LOCAL_PATH)/configs/media/media_profiles_ravelin.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media/media_profiles_ravelin.xml \
 		$(LOCAL_PATH)/configs/media/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media/media_profiles_V1_0.xml \
 
-# Overlays
+# Overlay
 DEVICE_PACKAGE_OVERLAYS += \
-    $(DEVICE_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay \
+    $(LOCAL_PATH)/overlay-lineage
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true

@@ -24,24 +24,11 @@ $(call inherit-product, $(DEVICE_PATH)/device.mk)
 $(call inherit-product, vendor/xiaomi/sky/sky-vendor.mk)
 
 # Infinity-X Flags
-INF_BUILD := true
-RUM_NAME := lineage
-TARGET_BOOTANIMATION_HALF_RES := true
 TARGET_BOOT_ANIMATION_RES := 1080
+INFINITY_BUILD_TYPE := UNOFFICIAL
+TARGET_SUPPORTS_BLUR := true
 INFINITY_MAINTAINER := "purvesh"
 WITH_GAPPS := true
-TARGET_SHIPS_FULL_GAPPS := true
-USE_PIXEL_CHARGER := true
-
-PRODUCT_SYSTEM_PROPERTIES += \
-    ro.infinity.soc=Snapdragon_4_Gen_2 \
-    ro.infinity.battery=5000mAh \
-    ro.infinity.display=1080x2460@90Hz \
-    ro.infinity.camera=50MP+8MP+2MP \
-    ro.product.marketname=sky
-
-DEVICE_PACKAGE_OVERLAYS += \
- $(DEVICE_PATH)/overlay-lineage
 
 ## Device identifier
 PRODUCT_DEVICE := sky
